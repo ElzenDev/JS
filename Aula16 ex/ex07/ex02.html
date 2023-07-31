@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ex07</title>
+
+</head>
+<body>
+    <header> 
+        <h1>Analisador de numeros</h1>
+    </header>
+
+    <section>
+        <div>
+            <p>Numero(1 a 100):
+                <input type="number" name="txtn" id="txtn"> 
+                <input type="button" value="Adicionar" onclick="adicionar()">
+                <input type="button" value="Apagar" onclick="apagar()">
+            </p>
+        </div >
+
+        <div id="divB">
+            <select name="txtin" id="txtin" size="12">
+                <option value=""></option>
+            </select>
+
+            <div id="res"></div>
+        </div>
+            
+        <div>
+            <input type="button" id="analisar" value="Analisar" onclick="analisar()">
+        </div>
+        
+    </section>
+
+    <footer>
+       <p>&copy;Elzen</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

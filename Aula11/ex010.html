@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex010</title>
+
+    <style>
+        body{
+            background-color:darkmagenta;
+            font: normal 16pt arial;
+        }
+        h1{
+            color: aquamarine;
+            text-align: center;
+        }
+        input{
+            text-align: center;
+            width: 160pt;
+            color:navy;
+        }
+        
+        div#res{
+            font: medium 20pt arial;
+            color:black;
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+            color: darkorange;
+        }
+    </style>
+</head>
+<body>
+    <h1>!SISTEMA DE MULTAS!</h1>
+    <h2>O limite de velocidade é de 60 km/h</h2>
+    <input type="number" name="txtvel" id="txtvel">km/h
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res"></div>
+
+    <script>
+        function calcular(){
+            var n1 = window.document.getElementById("txtvel")
+            var res = window.document.getElementById("res")
+            var vel = Number(n1.value)
+
+            res.innerHTML = `<p>A sua velocidade atual é de <strong>${vel}km/h</strong></p>`
+
+            if(vel > 60){
+                res.style.color = 'red'
+                res.innerHTML +='Você foi multado por ultrapassar o limite de velocidade!'
+            }
+            else{
+                res.style.color = 'chartreuse'
+                res.innerHTML += 'O seu veículo esta dentro do limite de velocidade.</br>  Dirija sempre utilizando o cinto de segurança'
+            }
+        }
+
+    </script>
+</body>
+</html>

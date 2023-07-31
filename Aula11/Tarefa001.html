@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nusei</title>
+
+    <style>
+        body{
+            font: normal 20pt arial;
+            background-color: indigo;
+        }
+        h1{
+            text-align: center;
+            color: aqua;
+        }
+        input{
+            text-align: center;
+            width: 200pt;
+            color: navy;
+        }
+        h2{
+            text-align: center;
+            color: darkorange;
+        }
+        div#res{
+            text-align:center;
+            color: chartreuse;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    <h2>Digite o seu País de origem</h2>
+
+    <input type="text" name="txtnacio" id="txtnacio">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"> Resultado</div>
+
+    <script>
+        function verificar(){
+            var nacio = window.document.getElementById('txtnacio')
+            var nacional = nacio.value
+            var res = window.document.querySelector('div#res')
+
+            if(nacional =='Angola'){
+                res.innerHTML = 'Você é um Angolano!.</br> Infelizmente.. se vc vive em angola'
+            }
+            else{
+                if(nacional =='Brasil'){
+                    res.innerHTML = 'Você é um Brasileiro!'
+                }else{
+                    if(nacional =='Argentina'){
+                        res.innerHTML = 'Você é um Argentino'
+                    }else{
+                        if(nacional =='Portugal'){
+                            res.innerHTML = 'Você é um Português'
+                        }else{
+                            res.innerHTML = 'Você é um Estrangeiro!'
+                        }
+                    }
+                }
+                //res.innerHTML = 'Você é um Estrangeiro!'
+            }
+        }
+    </script>
+</body>
+</html>
